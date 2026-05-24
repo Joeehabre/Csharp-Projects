@@ -48,14 +48,14 @@ while (player.Balance > 0)
         else
         {
             player.WinBet(blackjack: true);
-            Console.WriteLine($"  Blackjack! You win ${ (int)(bet * 1.5)}!");
+            Console.WriteLine($"  Blackjack! You win ${(int)(bet * 1.5)}!");
         }
         if (!PlayAgain()) break;
         continue;
     }
 
     // ── Player turn ──────────────────────────────────────────────────────────
-    while (!player.Hand.IsBust && player.WantsHit(dealer.Hand.Cards.Last()))
+    while (!player.Hand.IsBust && player.WantsHit())
     {
         player.Hand.Add(deck.Deal());
         Console.WriteLine($"  You:    {player.Hand}");
@@ -72,7 +72,7 @@ while (player.Balance > 0)
     dealer.RevealHand();
     Console.WriteLine($"\n  Dealer reveals: {dealer.Hand}");
 
-    while (dealer.WantsHit(dealer.Hand.Cards.First()))
+    while (dealer.WantsHit())
     {
         dealer.Hand.Add(deck.Deal());
         Console.WriteLine($"  Dealer: {dealer.Hand}");

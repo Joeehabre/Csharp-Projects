@@ -20,7 +20,7 @@ Each project is self-contained and showcases distinct C# language features.
 |---|---|---|
 | [`task-manager/`](task-manager/) | Full-featured CLI task manager with priorities, due dates, tags, and JSON persistence | LINQ, `System.Text.Json`, generics, enums |
 | [`blackjack/`](blackjack/) | Terminal Blackjack with betting, dealer AI, and multi-round play | OOP, abstract classes, inheritance, polymorphism |
-| [`data-structures/`](data-structures/) | Generic Stack, Queue, Doubly-Linked List, and BST from scratch | Generics, `IEnumerable<T>`, iterators, `yield return` |
+| [`data-structures/`](data-structures/) | Generic Stack, Queue, Doubly-Linked List, and BST from scratch | Generics, `IEnumerable<T>`, `yield return`, iterative in-order traversal |
 | [`design-patterns/`](design-patterns/) | Observer, Factory, Strategy, and Builder patterns with real examples | Interfaces, delegates, fluent API, SOLID principles |
 
 ---
@@ -63,7 +63,7 @@ A CLI task manager with full CRUD, filtering, and persistence.
 - JSON persistence via `System.Text.Json` — survives restarts
 - Color-coded output: red for overdue, yellow for high priority
 
-**Concepts:** LINQ (`Where`, `GroupBy`, `ToDictionary`, `OrderBy`), JSON serialization, `enum`, `record`-style models
+**Concepts:** LINQ (`Where`, `GroupBy`, `ToDictionary`, `OrderBy`), JSON serialization, `enum`, POCO models
 
 ---
 
@@ -91,7 +91,7 @@ Four generic data structures built from scratch — no BCL equivalents used.
 | `LinkedList<T>` | Doubly-linked nodes | AddFirst/Last O(1) |
 | `BinarySearchTree<T>` | Recursive nodes + iterative in-order | Insert/Search O(log n) avg |
 
-**Concepts:** Generics with constraints (`where T : IComparable<T>`), `IEnumerable<T>`, `yield return`, operator overloading
+**Concepts:** Generics with constraints (`where T : IComparable<T>`), `IEnumerable<T>`, `yield return`, iterative and recursive traversal
 
 ---
 

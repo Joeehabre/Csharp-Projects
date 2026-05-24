@@ -14,7 +14,7 @@ public abstract class Player
 
     public void ResetHand() => Hand = new Hand();
 
-    public abstract bool WantsHit(Card dealerVisible);
+    public abstract bool WantsHit();
 }
 
 public class HumanPlayer : Player
@@ -39,7 +39,7 @@ public class HumanPlayer : Player
 
     public void Push() => Balance += CurrentBet;   // Tie — return bet
 
-    public override bool WantsHit(Card dealerVisible)
+    public override bool WantsHit()
     {
         Console.Write("  Hit or Stand? (h/s): ");
         return Console.ReadLine()?.Trim().ToLower() == "h";
@@ -61,7 +61,7 @@ public class Dealer : Player
     public void RevealHand() => HiddenCard = null;
 
     // Dealer hits on soft 16 or below, stands on hard 17+
-    public override bool WantsHit(Card dealerVisible) => Hand.Value < 17;
+    public override bool WantsHit() => Hand.Value < 17;
 
     public string MaskedString =>
         HiddenCard is not null

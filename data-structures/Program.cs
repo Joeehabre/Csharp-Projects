@@ -1,4 +1,5 @@
-using DataStructures;
+// Stack<T>, Queue<T>, and LinkedList<T> are fully qualified to disambiguate
+// from identically named types in System.Collections.Generic.
 
 Console.WriteLine("╔══════════════════════════════════╗");
 Console.WriteLine("║   C# Generic Data Structures     ║");
@@ -32,7 +33,7 @@ Console.WriteLine($"  After RemoveFirst + RemoveLast: {string.Join(" <-> ", list
 
 // ── BST ──────────────────────────────────────────────────────────────────
 Console.WriteLine("\n── BinarySearchTree<int> ──");
-var bst = new BinarySearchTree<int>();
+var bst = new DataStructures.BinarySearchTree<int>();
 foreach (var n in new[] { 5, 3, 7, 1, 4, 6, 9 }) bst.Insert(n);
 Console.WriteLine($"  Inserted: 5 3 7 1 4 6 9  |  Count: {bst.Count}  |  Height: {bst.Height()}");
 Console.WriteLine($"  In-order:   {string.Join(", ", bst.InOrder())}");
