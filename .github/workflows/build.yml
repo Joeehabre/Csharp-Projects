@@ -25,3 +25,6 @@ jobs:
 
       - name: Run data-structures demo
         run: dotnet run --project data-structures/data-structures.csproj --configuration Release
+
+      - name: Run design-patterns demo
+        run: dotnet run --project design-patterns/design-patterns.csproj --configuration Release

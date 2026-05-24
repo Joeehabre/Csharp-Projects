@@ -93,6 +93,31 @@ Four generic data structures built from scratch — no BCL equivalents used.
 
 **Concepts:** Generics with constraints (`where T : IComparable<T>`), `IEnumerable<T>`, `yield return`, iterative and recursive traversal
 
+**Sample output:**
+```
+── Stack<int> ──
+  Pushed 1-5  |  Count: 5  |  Peek: 5
+  Popped: 5   |  Count: 4
+  Contents (top→bottom): 4, 3, 2, 1
+
+── Queue<string> ──
+  Enqueued: alpha, beta, gamma, delta  |  Count: 4
+  Dequeued: alpha  |  Peek: beta
+  Contents (front→back): beta, gamma, delta
+
+── LinkedList<int> ──
+  List: 0 <-> 1 <-> 2 <-> 3  |  Count: 4
+  Contains 2: True  |  Contains 9: False
+  After RemoveFirst + RemoveLast: 1 <-> 2
+
+── BinarySearchTree<int> ──
+  Inserted: 5 3 7 1 4 6 9  |  Count: 7  |  Height: 3
+  In-order:   1, 3, 4, 5, 6, 7, 9
+  Pre-order:  5, 3, 1, 4, 7, 6, 9
+  Post-order: 1, 4, 3, 6, 9, 7, 5
+  Contains 4: True  |  Contains 8: False
+```
+
 ---
 
 ### 🧩 Design Patterns
@@ -103,7 +128,36 @@ Four classic GoF patterns demonstrated with practical C# examples.
 | **Observer** | Stock market price alerts | Events, loose coupling, `interface` subscriptions |
 | **Factory** | Shape factory (Circle, Rectangle, Triangle) | Open/closed principle, polymorphic creation |
 | **Strategy** | Sorting algorithms with benchmarks | Swappable algorithms, `Stopwatch`, generics |
-| **Builder** | Fluent pizza builder | Fluent API, immutable `record`-style products |
+| **Builder** | Fluent pizza builder | Fluent API, `init`-only properties, immutability |
+
+**Sample output:**
+```
+── 1. Observer Pattern (Stock Market) ──
+  📋 LOG    AAPL: $180.00 ▲ $185.50
+  📋 LOG    AAPL: $185.50 ▼ $172.00
+  🚨 ALERT  AAPL: $185.50 → $172.00  (7.3% change)
+  📋 LOG    MSFT: $320.00 ▲ $348.00
+  🚨 ALERT  MSFT: $320.00 → $348.00  (8.8% change)
+
+── 2. Factory Pattern (Shapes) ──
+  Circle       | Area:    78.54 | Perimeter:    31.42
+  Rectangle    | Area:    24.00 | Perimeter:    20.00
+  Triangle     | Area:     6.00 | Perimeter:    12.00
+
+── 3. Strategy Pattern (Sorting) ──
+  Bubble Sort  :  1843.2 µs
+  Quick Sort   :    98.6 µs
+  Merge Sort   :   112.4 µs
+  Verified sorted: 0 ≤ 9998
+
+── 4. Builder Pattern (Pizza) ──
+  Your pizza:
+    Size:   Large
+    Crust:  Thick
+    Sauce:  BBQ
+    Cheese: Cheddar (extra)
+    Tops:   Chicken, Red Onion, Jalapeños
+```
 
 ---
 
