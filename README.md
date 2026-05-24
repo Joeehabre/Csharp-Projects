@@ -1,7 +1,5 @@
 # C# Projects by Joe Habre
 
-![Build](https://github.com/Joeehabre/Csharp-Projects/actions/workflows/build.yml/badge.svg)
-
 <p align="left">
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
   <img src="https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
@@ -9,8 +7,10 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
 </p>
 
-A collection of **C# / .NET 8** projects covering CLI tools, OOP design patterns, generic data structures, and terminal games.  
-Each project is self-contained and showcases distinct C# language features.
+![Build](https://github.com/Joeehabre/Csharp-Projects/actions/workflows/build.yml/badge.svg)
+
+A collection of **C# / .NET 8** projects by **Joe Habre (AUB)**.  
+Each project is self-contained and showcases distinct C# language features — from LINQ and generics to design patterns and OOP.
 
 ---
 
@@ -21,7 +21,7 @@ Each project is self-contained and showcases distinct C# language features.
 | [`task-manager/`](task-manager/) | Full-featured CLI task manager with priorities, due dates, tags, and JSON persistence | LINQ, `System.Text.Json`, generics, enums |
 | [`blackjack/`](blackjack/) | Terminal Blackjack with betting, dealer AI, and multi-round play | OOP, abstract classes, inheritance, polymorphism |
 | [`data-structures/`](data-structures/) | Generic Stack, Queue, Doubly-Linked List, and BST from scratch | Generics, `IEnumerable<T>`, `yield return`, iterative in-order traversal |
-| [`design-patterns/`](design-patterns/) | Observer, Factory, Strategy, and Builder patterns with real examples | Interfaces, delegates, fluent API, SOLID principles |
+| [`design-patterns/`](design-patterns/) | Observer, Factory, Strategy, and Builder patterns with real examples | Interfaces, fluent API, SOLID principles |
 
 ---
 
@@ -34,12 +34,23 @@ git clone https://github.com/Joeehabre/Csharp-Projects.git
 cd Csharp-Projects
 ```
 
-Run any project:
-
+### task-manager
 ```bash
 dotnet run --project task-manager/task-manager.csproj
+```
+
+### blackjack
+```bash
 dotnet run --project blackjack/blackjack.csproj
+```
+
+### data-structures
+```bash
 dotnet run --project data-structures/data-structures.csproj
+```
+
+### design-patterns
+```bash
 dotnet run --project design-patterns/design-patterns.csproj
 ```
 
@@ -167,3 +178,9 @@ Four classic GoF patterns demonstrated with practical C# examples.
 - Generic constraints and `IEnumerable<T>` / `yield return` for lazy iteration
 - Classic GoF design patterns applied in real, runnable examples
 - .NET 8 project structure, solution files, and CI with GitHub Actions
+
+---
+
+## License
+
+[MIT](LICENSE)
