@@ -24,3 +24,6 @@ packages/
 
 # Task manager data file
 tasks.json
+
+# Test results
+TestResults/

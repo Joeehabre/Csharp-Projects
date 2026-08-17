@@ -22,6 +22,25 @@ Each project is self-contained and showcases distinct C# language features — f
 | [`blackjack/`](blackjack/) | Terminal Blackjack with betting, dealer AI, and multi-round play | OOP, abstract classes, inheritance, polymorphism |
 | [`data-structures/`](data-structures/) | Generic Stack, Queue, Doubly-Linked List, and BST from scratch | Generics, `IEnumerable<T>`, `yield return`, iterative in-order traversal |
 | [`design-patterns/`](design-patterns/) | Observer, Factory, Strategy, and Builder patterns with real examples | Interfaces, fluent API, SOLID principles |
+| [`tests/`](tests/DataStructures.Tests/) | xUnit test suite covering the data structures | xUnit, `[Fact]`, exception and edge-case testing |
+
+---
+
+## Tests
+
+The data structures are covered by an **xUnit** suite that runs on every push:
+
+```bash
+dotnet test
+```
+
+**46 tests** covering LIFO/FIFO ordering, capacity growth, circular-buffer wrap-around,
+tree traversals, height on balanced vs degenerate trees, empty-collection exceptions,
+and duplicate-key handling.
+
+> Writing these caught a real bug: `BinarySearchTree.Count` was incremented on every
+> `Insert` call, including duplicates that were never stored — so the count drifted
+> above the true number of nodes. Fixed in [`BinarySearchTree.cs`](data-structures/BinarySearchTree.cs).
 
 ---
 
