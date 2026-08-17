@@ -15,16 +15,22 @@ public class BinarySearchTree<T> where T : IComparable<T>
 
     public void Insert(T value)
     {
-        _root = Insert(_root, value);
-        Count++;
+        bool added = false;
+        _root = Insert(_root, value, ref added);
+        if (added) Count++;
     }
 
-    private static Node Insert(Node? node, T value)
+    // Duplicate keys are ignored, so `added` reports whether a node was created.
+    private static Node Insert(Node? node, T value, ref bool added)
     {
-        if (node is null) return new Node(value);
+        if (node is null)
+        {
+            added = true;
+            return new Node(value);
+        }
         int cmp = value.CompareTo(node.Value);
-        if      (cmp < 0) node.Left  = Insert(node.Left,  value);
-        else if (cmp > 0) node.Right = Insert(node.Right, value);
+        if      (cmp < 0) node.Left  = Insert(node.Left,  value, ref added);
+        else if (cmp > 0) node.Right = Insert(node.Right, value, ref added);
         return node;
     }
 
