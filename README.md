@@ -10,7 +10,7 @@
 ![Build](https://github.com/Joeehabre/Csharp-Projects/actions/workflows/build.yml/badge.svg)
 
 A collection of **C# / .NET 8** projects by **Joe Habre (AUB)**.  
-Each project is self-contained and showcases distinct C# language features — from LINQ and generics to design patterns and OOP.
+Each project is self-contained and showcases distinct C# language features, from LINQ and generics to design patterns and OOP.
 
 ---
 
@@ -39,7 +39,7 @@ tree traversals, height on balanced vs degenerate trees, empty-collection except
 and duplicate-key handling.
 
 > Writing these caught a real bug: `BinarySearchTree.Count` was incremented on every
-> `Insert` call, including duplicates that were never stored — so the count drifted
+> `Insert` call, including duplicates that were never stored, so the count drifted
 > above the true number of nodes. Fixed in [`BinarySearchTree.cs`](data-structures/BinarySearchTree.cs).
 
 ---
@@ -83,27 +83,27 @@ dotnet build CsharpProjects.sln
 
 ## Project Details
 
-### 🗂 Task Manager
+### Task Manager
 A CLI task manager with full CRUD, filtering, and persistence.
 
 **Features:**
 - Add tasks with title, priority, due date, and tag
 - Mark complete, delete, filter by tag or priority
 - LINQ-powered queries: overdue tasks, stats grouped by priority
-- JSON persistence via `System.Text.Json` — survives restarts
+- JSON persistence via `System.Text.Json`: survives restarts
 - Color-coded output: red for overdue, yellow for high priority
 
 **Concepts:** LINQ (`Where`, `GroupBy`, `ToDictionary`, `OrderBy`), JSON serialization, `enum`, POCO models
 
 ---
 
-### 🃏 Blackjack
+### Blackjack
 A fully playable terminal Blackjack game.
 
 **Features:**
 - Complete 52-card deck with Fisher-Yates shuffle
 - Ace value auto-adjustment (11 → 1 to avoid bust)
-- Dealer AI — hits until reaching 17
+- Dealer AI, hits until reaching 17
 - Betting system with balance tracking
 - Blackjack pays 3:2; push returns bet
 
@@ -111,7 +111,7 @@ A fully playable terminal Blackjack game.
 
 ---
 
-### 📦 Data Structures
+### Data Structures
 Four generic data structures built from scratch, without relying on the built-in collections.
 
 | Structure | Implementation | Complexity |
@@ -150,7 +150,7 @@ Four generic data structures built from scratch, without relying on the built-in
 
 ---
 
-### 🧩 Design Patterns
+### Design Patterns
 Four classic Gang-of-Four patterns, each with a small real-world example.
 
 | Pattern | Example | What it shows |
@@ -193,7 +193,7 @@ Four classic Gang-of-Four patterns, each with a small real-world example.
 
 ## What I Learned
 
-- Idiomatic C# — LINQ, nullable reference types, pattern matching, `init` properties
+- Idiomatic C#, LINQ, nullable reference types, pattern matching, `init` properties
 - Generic constraints and `IEnumerable<T>` / `yield return` for lazy iteration
 - Classic GoF design patterns applied in real, runnable examples
 - .NET 8 project structure, solution files, and CI with GitHub Actions
