@@ -10,7 +10,7 @@
 ![Build](https://github.com/Joeehabre/Csharp-Projects/actions/workflows/build.yml/badge.svg)
 
 A collection of **C# / .NET 8** projects by **Joe Habre (AUB)**.  
-Each project is self-contained and showcases distinct C# language features, from LINQ and generics to design patterns and OOP.
+Each project is self-contained and focuses on a different part of C#, from LINQ and generics to design patterns and OOP.
 
 ---
 
